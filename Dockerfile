@@ -8,7 +8,7 @@ FROM gcc:11.2.0 as build
 # 171022 = Unmodded Client
 # 171023 = DLU Client
 ARG BUILD_VERSION=171022
-ARG BUILD_ARGS=-j12
+ARG BUILD_ARGS=-j8
 
 # Working Directory
 WORKDIR /opt/darkflame-universe
