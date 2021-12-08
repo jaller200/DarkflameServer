@@ -25,10 +25,10 @@ services:
     container_name: mariadb
     image: mariadb:latest
     environment:
-      - MYSQL_ROOT_PASSWORD: password
-      - MYSQL_DATABASE: darkflame
-      - MYSQL_USER: darkflame
-      - MYSQL_PASSWORD: darkflame_pw
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=darkflame
+      - MYSQL_USER=darkflame
+      - MYSQL_PASSWORD=darkflame_pw
     networks:
       - darkflame_net
     ports:
@@ -79,9 +79,6 @@ services:
   # The master server
   #
   dlu-master:
-    args:
-      - BUILD_VERSION=171022
-      - BUILD_ARGS=-j2
     build: .
     container_name: dlu-master
     depends_on:
